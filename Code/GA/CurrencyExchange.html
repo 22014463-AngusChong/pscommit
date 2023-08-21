@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(image\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden ;
+        }
+        section {
+            background-color: white;
+            float: left;
+            width: 350px;
+            height: 70px;
+        }
+        button {
+            float: right;
+            position: relative; top: 530px;
+            color: white;
+        }
+        .exch {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function exchConf() {
+      window.location.href = "CurrencyExchangeConfirm.html";
+    }
+    </script>
+    <section>
+        <h1 style="color: red;">
+            Currency Exchange
+        </h1>
+    </section>
+    <form action="/action_page.php" style="position: relative;top: 255px;left: 70px;">
+        <select name="currencies">
+          <option value="Singapore">Sinagpore(SGD)</option>
+          <option value="Malaysia">Malaysia(MYR)</option>
+          <option value="Thailand">Thailand(THB)</option>
+          <option value="Vietnam">Vietnam(VND)</option>
+        </select>
+      </form>
+      <input id="name" type="text" value="" name="name" style="position: relative;top: 300px; left: 40px;">
+      <form action="/action_page.php" style="position: relative;top: 200px; left: 320px;">
+        <select name="currencies">
+          <option value="Singapore">Sinagpore(SGD)</option>
+          <option value="Malaysia">Malaysia(MYR)</option>
+          <option value="Thailand">Thailand(THB)</option>
+          <option value="Vietnam">Vietnam(VND)</option>
+        </select>
+      </form>
+      <input type="text" value="" style="position: relative;top: 245px; left: 650px;">
+      <button class="exch" type="Submit" onclick="exchConf()">Exchange</button>
+</body>
+</html>

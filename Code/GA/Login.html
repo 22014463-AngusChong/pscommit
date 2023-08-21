@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(image\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        nav {
+            background-color: white;
+            color: red;
+            float: left;
+            width: 100px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        button {
+            position: relative;
+            top: 580px;
+            left: 450px;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function mainpage() {
+            window.location.href = "Mainpage.html";
+        }
+        function register() {
+            window.location.href = "Register.html";
+        }
+    </script>
+    <nav>
+        Login
+    </nav>
+    <form method="post">
+        <div style="float:left;margin-right:20px; position: relative;top: 200px;">
+            <label for="Userid" style="color: white;">User Id: </label>
+            <input id="name" type="text" value="" name="name" style="position: relative; left: 20px;">
+        </div>
+        <div style="float:left;margin-right:20px; position: relative;top: 300px; right: 265px;">
+            <label for="Userid" style="color: white;">Password: </label>
+            <input id="name" type="text" value="" name="name">
+        </div>
+    </form>
+    <button class="Login" type="submit" onclick="mainpage()">Login</button>
+    <button class="Register" type="submit" onclick="register()">Register</button>
+</body>
+
+</html>

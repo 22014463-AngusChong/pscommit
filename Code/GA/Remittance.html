@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(image\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden ;
+        }
+        section {
+            background-color: white;
+            float: left;
+            width: 350px;
+            height: 70px;
+        }
+        button {
+            float: right;
+            position: relative; top: 520px;
+            color: white;
+        }
+        .remit {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function remitConf() {
+      window.location.href = "RemittanceConfirm.html";
+    }
+    </script>
+    <section>
+        <h1 style="color: red;">
+            Remittance
+        </h1>
+    </section>
+    <form method="post">
+        <div style="float:left;margin-right:20px; position: relative;top: 200px;">
+            <label for="recipient" style="color: white;">Recipient: </label>
+            <input type="text" value="" name="recipient" style="position: relative; left: 30px;">
+        </div>
+        <div style="float:left;margin-right:20px; position: relative;top: 300px; right: 280px;">
+            <label for="bankAccount" style="color: white;">Bank account: </label>
+            <input type="text" value="" name="bankAccount">
+        </div>
+        <select name="currencies" style="position: relative;top: 370px;right: 459px;">
+            <option value="Singapore">Sinagpore(SGD)</option>
+            <option value="Malaysia">Malaysia(MYR)</option>
+            <option value="Thailand">Thailand(THB)</option>
+            <option value="Vietnam">Vietnam(VND)</option>
+          </select>
+          <input type="text" value="" style="position: relative;top: 445px; right: 630px;">
+    </form>
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top"  style="position: relative; left: 700px; top: 550px;">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="6TLKRTN898LD2" />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+      </form>
+    <button class="remit" type="Submit" onclick="remitConf()">Remit</button>
+</body>
+</html>

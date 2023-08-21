@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(image\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: red;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: right;
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 18px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function currencyExch() {
+            window.location.href = "CurrencyExchange.html";
+        }
+        function remittance() {
+            window.location.href = "Remittance.html";
+        }
+    </script>
+    <ul>
+        <li><a class="active" href=Mainpage.html>Homepage</a></li>
+        <li><a href=Homepage.html>Logout</a></li>
+        <li><a href=Support.html>Feedback</a></li>
+        <li><a href=Account.html>Account</a></li>
+        <li><a href=Profile.html>Profile</a></li>
+    </ul>
+    <div class="container">
+        <div class="row" style="padding: 300px;">
+            <div class="col">
+                <article>
+                    <img src="MainpageCE.png" onclick="currencyExch()" style="position: relative; right: 50px; bottom: 70px; width: 200px;">
+                </article>
+            </div>
+            <div class="col">
+                <article>
+                    <img src="MainpageRe.png" onclick="remittance()" style="position: relative; left: 50px; bottom: 70px; width: 200px;">
+                </article>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
